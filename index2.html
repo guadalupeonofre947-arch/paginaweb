@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oso Dulce - Pastelería</title>
+  <style>
+    :root {
+      --rosa-claro: #fcdede;
+      --rosa: #f9b4b4;
+      --menta: #c0f5e6;
+      --lila: #e3c5f7;
+      --amarillo: #fff3b0;
+      --texto: #4a4a4a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: var(--rosa-claro);
+      color: var(--texto);
+    }
+
+    header {
+      background: var(--rosa);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header img.logo {
+      width: 60px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: 2.5em;
+      color: white;
+    }
+
+    nav {
+      background-color: var(--menta);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #e91e63;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    section#menu {
+      background-color: var(--lila);
+    }
+
+    section#menu h2,
+    section#pedido h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .productos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 200px;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
+      margin: 10px 0 5px;
+    }
+
+    .producto p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+
+    section#pedido {
+      background-color: var(--amarillo);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: var(--rosa);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: var(--rosa);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Logo Osito" class="logo">
+    <h1>Oso Dulce</h1>
+  </header>
+
+  <nav>
+    <a href="#menu">Menú</a>
+    <a href="#pedido">Hacer Pedido</a>
+  </nav>
+
+  <section id="menu">
+    <h2>Menú de Delicias</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="PASTEL.jpg" alt="Pastel de Fresa">
+        <h3>Pastel de Fresa</h3>
+        <p>$25.00</p>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1612197753686-dfdb92a92e2b" alt="Cupcake de Vainilla">
+        <h3>Cupcake de Vainilla</h3>
+        <p>$4.50</p>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1548366086-24d21e16cddd" alt="Galletas Decoradas">
+        <h3>Galletas Decoradas</h3>
+        <p>$6.00</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pedido">
+    <h2>Haz tu Pedido</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="producto">Producto:</label>
+      <select id="producto" required>
+        <option value="">Selecciona uno</option>
+        <option value="pastel">Pastel de Fresa</option>
+        <option value="cupcake">Cupcake de Vainilla</option>
+        <option value="galleta">Galletas Decoradas</option>
+      </select>
+
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" min="1" required>
+
+      <label for="mensaje">Mensaje (opcional):</label>
+      <textarea id="mensaje" rows="3"></textarea>
+
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Oso Dulce. Hecho con amor y azúcar. 🧁
+  </footer>
+
+</body>
+</html>
